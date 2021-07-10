@@ -1,0 +1,41 @@
+{
+    "paths": [
+        {
+            "name": "/posts",
+            "lambdaFunction": "getPosts",
+            "privacy": {
+                "protected": true,
+                "auth": [
+                    "/GET"
+                ],
+                "unauth": [
+                    "/GET"
+                ]
+            },
+            "policyResourceName": "/posts"
+        }
+    ],
+    "resourceName": "getPostApi",
+    "apiName": "getPostApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "getPosts"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 1,
+        "authRoleName": "amplify-serverlessblog-dev-113637-authRole",
+        "unAuthRoleName": "amplify-serverlessblog-dev-113637-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "getPosts",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

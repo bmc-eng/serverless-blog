@@ -10,6 +10,11 @@
       "StackName": "amplify-serverlessblog-dev-113637",
       "StackId": "arn:aws:cloudformation:eu-west-2:443230600320:stack/amplify-serverlessblog-dev-113637/997fc640-b632-11eb-a65d-0243ec4de53c",
       "AmplifyAppId": "d1n5jzqlqj2p1y"
+    },
+    "categories": {
+      "auth": {
+        "cognito111e7f51": {}
+      }
     }
   }
 }

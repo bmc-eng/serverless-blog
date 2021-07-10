@@ -1,13 +1,16 @@
 import React from 'react'
 import Amplify, {API} from 'aws-amplify';
+import awsconfig from '../aws-exports';
 
-// Import the config file to connect into your API endpoint
-import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
 
 function Posts(){
 
-    const posts = await API.get('api430b7ed9','/posts');
-    console.log(posts);
+    const getAllPosts = async () =>{
+        await API.get("getPostsApi","/posts",{"header":"getAllPosts"});
+    }
+
+    console.log(getAllPosts());
     return(
         <div className='post-body'>
             <h1>List of posts</h1>
