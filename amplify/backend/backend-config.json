@@ -1,0 +1,10 @@
+{
+  "storage": {
+    "ServerlessBlogPosts": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    }
+  },
+  "function": {},
+  "api": {}
+}

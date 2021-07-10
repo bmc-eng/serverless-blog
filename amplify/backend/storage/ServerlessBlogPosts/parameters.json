@@ -1,0 +1,7 @@
+{
+    "tableName": "ServerlessBlogPosts",
+    "partitionKeyName": "id",
+    "partitionKeyType": "S",
+    "sortKeyName": "titleLink",
+    "sortKeyType": "S"
+}
