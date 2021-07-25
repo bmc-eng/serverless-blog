@@ -83,7 +83,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-serverlessblog-dev-113637-deployment",
-          "S3Key": "amplify-builds/getPosts-635a2f454c6d7a45395a-build.zip"
+          "S3Key": "amplify-builds/getPosts-6b3958724a3479636c64-build.zip"
         }
       }
     },

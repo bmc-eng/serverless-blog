@@ -34,20 +34,26 @@ const getSinglePost = async(id, titleLink) => {
 exports.handler = async (event) => {
     // filter the event based on all post request or single item
     //const command = JSON.parse(event);
-    //console.log(command);
+    //console.log(event.queryStringParameters)
+    const userData = event.queryStringParameters;
+    //console.log(userData);
     var item = null;
     
-    switch (event.header) {
+    switch (userData.header) {
         case "getAllPosts":
             item = await getAllPosts();
             break;
         
         case "getPost":
-            item = await getSinglePost(event.id, event.link);
+            item = await getSinglePost(userData.id, userData.link);
             break;
     }
     const response = {
         statusCode: 200,
+        headers: {
+            "Access-Control-Allow-Origin" : "*"
+        },
+
         body: JSON.stringify(item)
     };
     return response;
