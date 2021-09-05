@@ -47,6 +47,9 @@ exports.handler = async (event) => {
         case "getPost":
             item = await getSinglePost(userData.id, userData.link);
             break;
+
+        default:
+            item = "No data";
     }
     const response = {
         statusCode: 200,

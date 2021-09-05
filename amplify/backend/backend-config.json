@@ -20,6 +20,21 @@
           ]
         }
       ]
+    },
+    "sendPost": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "storage",
+          "resourceName": "ServerlessBlogPosts",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
     }
   },
   "api": {
@@ -30,6 +45,20 @@
         {
           "category": "function",
           "resourceName": "getPosts",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+    },
+    "sendPostApi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "sendPost",
           "attributes": [
             "Name",
             "Arn"

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "storage": {
+      "ServerlessBlogPosts": [
+        "create",
+        "update"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

@@ -41,12 +41,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "getPosts",
+            "sendPost",
             {
               "Fn::Join": [
                 "",
                 [
-                  "getPosts",
+                  "sendPost",
                   "-",
                   {
                     "Ref": "env"
@@ -83,7 +83,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-serverlessblog-dev-113637-deployment",
-          "S3Key": "amplify-builds/getPosts-33766e596b36716b5862-build.zip"
+          "S3Key": "amplify-builds/sendPost-344a50654a6b72726351-build.zip"
         }
       }
     },
@@ -93,12 +93,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "serverlessblogLambdaRolefafaac88",
+            "serverlessblogLambdaRole472b9f96",
             {
               "Fn::Join": [
                 "",
                 [
-                  "serverlessblogLambdaRolefafaac88",
+                  "serverlessblogLambdaRole472b9f96",
                   "-",
                   {
                     "Ref": "env"
@@ -187,12 +187,11 @@
             {
               "Effect": "Allow",
               "Action": [
-                "dynamodb:Get*",
-                "dynamodb:BatchGetItem",
-                "dynamodb:List*",
-                "dynamodb:Describe*",
-                "dynamodb:Scan",
-                "dynamodb:Query"
+                "dynamodb:Put*",
+                "dynamodb:Create*",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:Update*",
+                "dynamodb:RestoreTable*"
               ],
               "Resource": [
                 {

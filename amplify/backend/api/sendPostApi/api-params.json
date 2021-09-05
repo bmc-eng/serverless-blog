@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/post",
+            "lambdaFunction": "sendPost",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/post"
+        }
+    ],
+    "resourceName": "sendPostApi",
+    "apiName": "sendPostApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "sendPost"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-serverlessblog-dev-113637-authRole",
+        "unAuthRoleName": "amplify-serverlessblog-dev-113637-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "sendPost",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
