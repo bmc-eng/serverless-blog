@@ -1,12 +1,10 @@
 import React from 'react';
 
-function Post({post,key}) {
+function Post({post}) {
     return(
-        <div key={key}>
-            {console.log(post.titleLink.S)}
+        <div>
             <h3>{post.title.S}</h3>
             <p>{post.bodyTrunk.S}</p>
-            <p>{post.titleLink.S}</p>
             <p>{post.blogDate.S}</p>
         </div>
     )
