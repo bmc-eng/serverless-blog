@@ -5,14 +5,16 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import FormControl from 'react-bootstrap/FormControl';
 
+
 function MenuBar(){
+    
     return(
         <div>
         <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="#home">Serverless Blog</Navbar.Brand>
             <Nav className="mr-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#features">New Post</Nav.Link>
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/#/newpost">New Post</Nav.Link>
             </Nav>
             <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
